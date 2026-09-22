@@ -7,11 +7,6 @@
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=0E75B6&center=true&vCenter=true&width=750&lines=Cloud+%26+DevOps+Enthusiast;AWS+%7C+Linux+%7C+Docker+%7C+Kubernetes;CI%2FCD+%7C+Jenkins+%7C+Terraform;Infrastructure+%26+Automation;Always+Learning+%F0%9F%9A%80" />
 
 <br/>
-
-<a href="https://github.com/shubhamnishnane-064">
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-&nbsp;
 <a href="https://www.linkedin.com/in/shubham-nishane-2b340b416/">
 <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
@@ -21,8 +16,6 @@
 </a>
 
 <br/><br/>
-
-<img src="https://komarev.com/ghpvc/?username=shubhamnishnane-064&style=for-the-badge&color=0e75b6&label=PROFILE+VIEWS"/>
 
 </div>
 
@@ -47,7 +40,7 @@ focus:
 
 I am an **M.Sc. Computer Science graduate** focused on building practical knowledge in **Cloud Computing, DevOps, Linux administration, automation, and infrastructure management**.
 
-My learning journey includes hands-on practice with **AWS, Linux, Git/GitHub, Docker, Kubernetes, Jenkins, Terraform, Bash, Python, networking, Nginx, Prometheus, and Grafana**.
+My learning journey includes hands-on practice with **AWS, Linux, Git/GitHub, Docker, Kubernetes, Jenkins, Terraform, Bash, Python, networking, Prometheus, and Grafana**.
 
 > **Learn → Build → Break → Troubleshoot → Automate → Repeat.**
 
@@ -79,7 +72,7 @@ My learning journey includes hands-on practice with **AWS, Linux, Git/GitHub, Do
 
 <img src="https://skillicons.dev/icons?i=nginx,apache,prometheus,grafana" />
 
-`Nginx` `Apache` `Prometheus` `Grafana`
+ `Prometheus` `Grafana`
 
 </div>
 
@@ -90,14 +83,14 @@ My learning journey includes hands-on practice with **AWS, Linux, Git/GitHub, Do
 | Area                   | Technologies                                                         |
 | ---------------------- | -------------------------------------------------------------------- |
 | ☁️ **Cloud**           | AWS EC2, S3, IAM, VPC, RDS, CloudWatch                               |
-| 🐧 **Linux**           | Ubuntu, Debian, RHEL, CentOS, SSH, System Administration             |
+| 🐧 **Linux**           | Ubuntu, SSH, System Administration             |
 | 🔄 **CI/CD**           | Jenkins, GitHub Actions, CI/CD Pipelines                             |
 | 📦 **Containers**      | Docker, Kubernetes                                                   |
 | 🏗️ **IaC**            | Terraform                                                            |
 | 🔀 **Version Control** | Git, GitHub                                                          |
 | 💻 **Scripting**       | Bash, Python                                                         |
 | 🌐 **Networking**      | TCP/IP, DNS, DHCP, HTTP/HTTPS, Load Balancing, Firewalls, VPN Basics |
-| 🌍 **Web**             | Nginx, Apache                                                        |
+| 🌍 **Web**             | Nginx,Apache                                                        |
 | 📊 **Monitoring**      | Prometheus, Grafana, CloudWatch                                      |
 | ⚙️ **Other**           | Ansible Basics, Cron                                                 |
 
@@ -262,6 +255,24 @@ dnf
 useradd
 usermod
 passwd
+# Tools 
+Nginx
+Apache
+SSH
+curl
+wget
+ngrok
+systemctl
+nsllokup
+traceroute
+netstat
+awk
+vim
+tar 
+gzip
+grep
+corn
+tmux
 ```
 
 I'm particularly interested in **Linux administration, permissions, users, networking, services, troubleshooting, SSH, and Bash automation**.
@@ -356,19 +367,6 @@ Relevant coursework includes:
 
 `Operating Systems` `Computer Networks` `Cloud Computing` `Distributed Systems`
 
----
-
-# 📈 GitHub Activity
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=shubhamnishnane-064&show_icons=true&hide_border=true&theme=transparent&rank_icon=github" />
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=shubhamnishnane-064&hide_border=true&theme=transparent" />
-
-</div>
-
----
 
 # 📌 DevOps Mindset
 
@@ -394,11 +392,6 @@ Relevant coursework includes:
 # 🤝 Let's Connect
 
 <div align="center">
-
-<a href="https://github.com/shubhamnishnane-064">
-<img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github"/>
-</a>
-
 <a href="https://www.linkedin.com/in/shubham-nishane-2b340b416/">
 <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin"/>
 </a>
@@ -422,3 +415,4 @@ Relevant coursework includes:
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0e75b6&height=120&section=footer"/>
 
 </div>
+ls
