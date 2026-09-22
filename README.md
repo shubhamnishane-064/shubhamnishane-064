@@ -66,11 +66,11 @@ My learning journey includes hands-on practice with **AWS, Linux, Git/GitHub, Do
 
 <img src="https://skillicons.dev/icons?i=linux,bash,python" />
 
-`Linux` `Bash` `Python` `SSH`
+`Linux` `Bash` `Python`
 
 ### Web & Monitoring
 
-<img src="https://skillicons.dev/icons?i=nginx,apache,prometheus,grafana" />
+<img src="https://skillicons.dev/icons?i=prometheus,grafana" />
 
  `Prometheus` `Grafana`
 
