@@ -410,9 +410,7 @@ Relevant coursework includes:
 
 **Learn. Build. Break. Troubleshoot. Automate. Repeat.**
 
-<br/>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0e75b6&height=120&section=footer"/>
 
 </div>
-ls
