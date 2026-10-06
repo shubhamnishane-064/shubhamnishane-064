@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shubham Nishane — DevOps / SRE Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#101a2c; --panel:#182440; --panel-2:#1d2c4d; --line:#2a3a5c;
+    --text:#e8edf7; --muted:#8695b3; --amber:#e8a33d; --teal:#3fb8af;
+    --sans:'Inter',system-ui,Arial,sans-serif; --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+    box-sizing:border-box;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#101a2c; --panel:#182440; --panel-2:#1d2c4d; --line:#2a3a5c; --text:#e8edf7; --muted:#8695b3;
+    }
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth; scroll-padding-top:70px;}
+  body{margin:0; background:var(--bg); color:var(--text); font-family:var(--sans); line-height:1.55; -webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+  img{max-width:100%;}
+  ::selection{background:var(--amber); color:#101a2c;}
+  :focus-visible{outline:2px solid var(--teal); outline-offset:2px;}
+
+  .wrap{max-width:760px; margin:0 auto; padding:0 24px;}
+
+  /* ---------- nav ---------- */
+  nav{position:sticky; top:0; z-index:10; background:rgba(16,26,44,.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; height:60px; padding-top:env(safe-area-inset-top,0px);}
+  .brand{font-family:var(--mono); font-weight:700; font-size:15px; letter-spacing:.02em;}
+  .brand span{color:var(--teal);}
+  .navlinks{display:flex; gap:22px; font-size:14px; color:var(--muted);}
+  .navlinks a{text-decoration:none; transition:color .15s;}
+  .navlinks a:hover{color:var(--text);}
+  .navlinks a.cta{color:var(--amber); border:1px solid var(--amber); padding:6px 12px; border-radius:4px;}
+  .navlinks a.cta:hover{background:var(--amber); color:#101a2c;}
+  @media (max-width:640px){ .navlinks{gap:14px; font-size:13px;} .navlinks a:not(.cta){display:none;} }
+
+  /* ---------- hero / terminal ---------- */
+  header.hero{padding:64px 0 48px;}
+  .status-line{font-family:var(--mono); font-size:13px; color:var(--teal); display:flex; align-items:center; gap:8px; margin-bottom:18px;}
+  .dot{width:7px; height:7px; border-radius:50%; background:var(--teal); box-shadow:0 0 0 3px rgba(63,184,175,.18);}
+  h1{font-size:40px; font-weight:800; margin:0 0 6px; letter-spacing:-.01em;}
+  .role{font-size:17px; color:var(--muted); margin:0 0 30px;}
+
+  .term{background:var(--panel); border:1px solid var(--line); border-radius:8px; overflow:hidden;}
+  .term-bar{display:flex; gap:6px; padding:10px 14px; border-bottom:1px solid var(--line);}
+  .term-bar i{width:10px; height:10px; border-radius:50%; background:#3a4a6b; display:block;}
+  .term-body{font-family:var(--mono); font-size:13.5px; padding:18px 20px 22px; white-space:pre-wrap; color:#c9d4ea;}
+  .term-body .prompt{color:var(--teal);}
+  .term-body .key{color:var(--amber);}
+  .cursor{display:inline-block; width:7px; height:15px; background:var(--amber); vertical-align:text-bottom; animation:blink 1s steps(1) infinite;}
+  @keyframes blink{50%{opacity:0;}}
+
+  /* ---------- sections ---------- */
+  section{padding:48px 0;}
+  section + section{border-top:1px solid var(--line);}
+  h2{font-size:13px; font-family:var(--mono); color:var(--muted); font-weight:500; margin:0 0 20px; letter-spacing:.02em;}
+  h2 b{color:var(--text); font-weight:600; font-family:var(--sans); font-size:20px; display:block; margin-bottom:4px;}
+
+  p.lede{font-size:15.5px; color:#c3cde3; max-width:62ch;}
+
+  /* skills as status grid */
+  .status-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-top:22px;}
+  @media (max-width:560px){ .status-grid{grid-template-columns:1fr;} }
+  .svc{background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:13px 15px;}
+  .svc-top{display:flex; align-items:center; gap:8px; font-size:14px; font-weight:600;}
+  .svc-top .dot{background:var(--teal);}
+  .svc-items{font-family:var(--mono); font-size:12px; color:var(--muted); margin-top:6px; line-height:1.6;}
+
+  /* projects */
+  .proj{background:var(--panel); border:1px solid var(--line); border-radius:8px; margin-top:16px; overflow:hidden;}
+  .proj-head{padding:16px 18px; border-bottom:1px solid var(--line);}
+  .proj-head .title{font-size:16px; font-weight:700;}
+  .proj-head .stack{font-family:var(--mono); font-size:11.5px; color:var(--amber); margin-top:4px;}
+  .proj-body{padding:16px 18px;}
+  .proj-body ul{margin:0; padding-left:18px; color:#c3cde3; font-size:14px;}
+  .proj-body li + li{margin-top:8px;}
+  .proj-log{font-family:var(--mono); font-size:11.5px; color:var(--teal); background:var(--panel-2); padding:9px 12px; border-top:1px solid var(--line);}
+
+  /* education */
+  .edu-row{display:flex; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px solid var(--line); font-size:14.5px;}
+  .edu-row:last-child{border-bottom:none;}
+  .edu-row .yr{font-family:var(--mono); color:var(--muted); font-size:13px; white-space:nowrap;}
+
+  /* contact / footer */
+  .contact-grid{display:flex; flex-wrap:wrap; gap:12px; margin-top:22px;}
+  .contact-grid a{font-family:var(--mono); font-size:13.5px; background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:10px 14px; text-decoration:none; transition:border-color .15s, color .15s;}
+  .contact-grid a:hover{border-color:var(--teal); color:var(--teal);}
+  footer{padding:30px 0 50px; color:var(--muted); font-size:12.5px; font-family:var(--mono);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">shubham<span>@</span>devops</div>
+    <div class="navlinks">
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#education">education</a>
+      <a href="#contact" class="cta">contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <div class="status-line"><span class="dot"></span>available for full-time roles</div>
+  <h1>Shubham Nishane</h1>
+  <p class="role">DevOps / Site Reliability Engineer, Fresher — AWS, CI/CD, Docker, Terraform, Linux</p>
+
+  <div class="term">
+    <div class="term-bar"><i></i><i></i><i></i></div>
+    <div class="term-body" id="termBody"></div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2><b>About</b>what i do</h2>
+    <p class="lede">M.Sc. Computer Science graduate (2026) who learns infrastructure by building it. I've deployed containerized apps on AWS EC2 behind Nginx, written a Jenkins pipeline that ships Docker images from a GitHub push, and provisioned AWS environments with Terraform. Every project ships with its own backup, rollback, and troubleshooting runbook on GitHub — I like systems that recover on their own and are easy to hand off.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2><b>Skills</b>service status</h2>
+    <div class="status-grid">
+      <div class="svc"><div class="svc-top"><span class="dot"></span>Programming Language</div><div class="svc-items">python · bash scripting</div></div>
+      <div class="svc"><div class="svc-top"><span class="dot"></span>CI/CD &amp; Automation</div><div class="svc-items">jenkins · github actions · bash</div></div>
+      <div class="svc"><div class="svc-top"><span class="dot"></span>Cloud — AWS</div><div class="svc-items">ec2 · s3 · iam · vpc · cloudwatch</div></div>
+      <div class="svc"><div class="svc-top"><span class="dot"></span>Containers</div><div class="svc-items">docker · kubernetes (minikube/kind)</div></div>
+      <div class="svc"><div class="svc-top"><span class="dot"></span>Infra as Code</div><div class="svc-items">terraform · ansible (basic)</div></div>
+      <div class="svc"><div class="svc-top"><span class="dot"></span>Linux Administration</div><div class="svc-items">ubuntu · rhel/centos · ssh · cron</div></div>
+      <div class="svc"><div class="svc-top"><span class="dot"></span>Monitoring</div><div class="svc-items">cloudwatch · prometheus · grafana</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2><b>Projects</b>deployment log</h2>
+
+    <div class="proj">
+      <div class="proj-head"><div class="title">CI/CD Pipeline for Dockerized Application</div><div class="stack">jenkins · github · docker · linux · bash</div></div>
+      <div class="proj-body">
+        <ul>
+          <li>Jenkins pipeline triggered from GitHub builds a Docker image and auto-deploys it to a Linux host.</li>
+          <li>Bash scripts automate repeatable build/deploy steps for consistent releases.</li>
+          <li>Documented rollback and failure-troubleshooting procedures.</li>
+        </ul>
+      </div>
+      <div class="proj-log">$ git push origin main &nbsp;→&nbsp; build #42 &nbsp;→&nbsp; deploy: success</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-head"><div class="title">AWS Cloud Application Deployment &amp; Operations</div><div class="stack">ec2 · iam · vpc · s3 · cloudwatch · nginx</div></div>
+      <div class="proj-body">
+        <ul>
+          <li>Dockerized app on EC2 with an Nginx reverse proxy and self-healing health checks.</li>
+          <li>IAM least-privilege access, VPC networking, automated S3 backups, CloudWatch monitoring.</li>
+          <li>Full deployment, recovery, and troubleshooting runbook on GitHub.</li>
+        </ul>
+      </div>
+      <div class="proj-log">$ curl /health &nbsp;→&nbsp; 200 ok &nbsp;·&nbsp; uptime 99.9%</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-head"><div class="title">Terraform AWS Infrastructure Lab</div><div class="stack">terraform · ec2 · vpc · iam · git</div></div>
+      <div class="proj-body">
+        <ul>
+          <li>Reusable Terraform config provisions a full AWS environment from code.</li>
+          <li>Variables and structured config make setup repeatable and auditable.</li>
+          <li>Least-privilege IAM practiced alongside infra changes and recovery.</li>
+        </ul>
+      </div>
+      <div class="proj-log">$ terraform apply &nbsp;→&nbsp; 9 resources added, 0 destroyed</div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2><b>Education</b>coursework</h2>
+    <div class="edu-row"><div>M.Sc. Computer Science — Savitribai Phule Pune University</div><div class="yr">2026</div></div>
+    <div class="edu-row"><div>B.Sc. Computer Science — Savitribai Phule Pune University</div><div class="yr">2024</div></div>
+    <p class="lede" style="margin-top:16px; font-size:14px;">Relevant coursework: Operating Systems, Computer Networks, Cloud Computing, Distributed Systems.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2><b>Contact</b>reach out</h2>
+    <div class="contact-grid">
+      <a href="mailto:shubhamnishane108@gmail.com">shubhamnishane108@gmail.com</a>
+      <a href="tel:+919960186317">+91 9960186317</a>
+      <a href="https://linkedin.com/in/shubham-nishane-2b340b416" target="_blank" rel="noopener">linkedin.com/in/shubham-nishane</a>
+      <a href="https://github.com/shubhamnishane-064" target="_blank" rel="noopener">github.com/shubhamnishane-064</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Pune, Maharashtra, India — built and deployed like the projects above.</div>
+</footer>
+
+<script>
+(function(){
+  var el = document.getElementById('termBody');
+  var lines = [
+    {t:'$ whoami', cls:'prompt'},
+    {t:'shubham-nishane', cls:''},
+    {t:'', cls:''},
+    {t:'$ cat role.txt', cls:'prompt'},
+    {t:'DevOps / SRE Engineer (Fresher)', cls:''},
+    {t:'', cls:''},
+    {t:'$ cat location.txt stack.txt', cls:'prompt'},
+    {t:'Pune, Maharashtra, India', cls:''},
+    {t:'AWS · Docker · Jenkins · Terraform · Kubernetes', cls:''}
+  ];
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) {
+    el.innerHTML = lines.map(function(l){
+      return l.t === '' ? '' : (l.cls === 'prompt'
+        ? '<span class="prompt">'+l.t+'</span>'
+        : l.t);
+    }).join('\n');
+    return;
+  }
+  var out = '';
+  var li = 0, ci = 0;
+  function step(){
+    if (li >= lines.length){ el.innerHTML = out + '<span class="cursor"></span>'; return; }
+    var line = lines[li];
+    if (line.t === ''){ out += '\n'; li++; ci = 0; setTimeout(step, 120); return; }
+    ci++;
+    var partial = line.t.slice(0, ci);
+    var rendered = out + (line.cls === 'prompt' ? '<span class="prompt">'+partial+'</span>' : partial) + '<span class="cursor"></span>';
+    el.innerHTML = rendered;
+    if (ci < line.t.length){ setTimeout(step, 18); }
+    else { out += (line.cls === 'prompt' ? '<span class="prompt">'+line.t+'</span>' : line.t) + '\n'; li++; ci = 0; setTimeout(step, 180); }
+  }
+  step();
+})();
+</script>
+</body>
+</html>
